@@ -26,7 +26,7 @@ def won?(board)
    symbol_at_2 = board_array[second_index]
    symbol_at_3 = board_array[third_index]
   
-   if symbol_at_1 == symbol_at_2 && symbol_at_2 == symbol_at_3
+   if symbol_at_1 == symbol_at_2 && symbol_at_2 == symbol_at_3 && symbol_at_1 != " "
      return win_combo
    end
   end
