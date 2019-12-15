@@ -16,9 +16,20 @@ WIN_COMBINATIONS = [
 ]
 
 def won?(board)
-  if board == [] || !WIN_COMBINATIONS
-    return false
-  else WIN_COMBINATIONS.each do |win_combo|
-    return #{win_combo} 
- end
+  WIN_COMBINATIONS.each do |win_combo|
+  
+   first_index = win_combo[0]
+   second_index = win_combo[1]
+   third_index = win_combo[2]
+  
+   symbol_at_1 = board_array[first_index]
+   symbol_at_2 = board_array[second_index]
+   symbol_at_3 = board_array[third_index]
+  
+   if symbol_at_1 == symbol_at_2 && symbol_at_2 == symbol_at_3
+     return win_combo
+   end
+  
+  end
+  return false
 end
